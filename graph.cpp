@@ -85,8 +85,8 @@ void Graph::runEades()
                     }
                 }         
                 if (isAdjacent){
-                    displX += calc.attractiveForceX(vertices.at(k), vertices.at(j), curEdge);
-                    displY += calc.attractiveForceY(vertices.at(k), vertices.at(j), curEdge);
+                    displX += calc.springForceX(vertices.at(k), vertices.at(j), curEdge);
+                    displY += calc.springForceY(vertices.at(k), vertices.at(j), curEdge);
                 } else {
                     displX += calc.repulsiveForceX(vertices.at(k), vertices.at(j));
                     displY += calc.repulsiveForceY(vertices.at(k), vertices.at(j));

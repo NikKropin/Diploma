@@ -12,9 +12,9 @@ public:
     Eades();
 
     double repulsiveForceX(const Vertice *u, const Vertice *v);
-    double attractiveForceX(const Vertice *u, const Vertice *v, const Edge *e);
+    double springForceX(const Vertice *u, const Vertice *v, const Edge *e);
     double repulsiveForceY(const Vertice *u, const Vertice *v);
-    double attractiveForceY(const Vertice *u, const Vertice *v, const Edge *e);
+    double springForceY(const Vertice *u, const Vertice *v, const Edge *e);
 };
 
 #endif // EADES_H

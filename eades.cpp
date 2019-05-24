@@ -13,7 +13,7 @@ double Eades::repulsiveForceX(const Vertice *  u, const Vertice *  v)
     return u->getRepConst()/denum * unitVec;
 }
 
-double Eades::attractiveForceX(const Vertice *u, const Vertice *v, const Edge *e)
+double Eades::springForceX(const Vertice *u, const Vertice *v, const Edge *e)
 {
     double unitVec = (u->getX() - v->getX())/
             std::sqrt(std::pow((u->getX()-v->getX()), 2) + std::pow((u->getY() - v->getY()), 2));
@@ -30,7 +30,7 @@ double Eades::repulsiveForceY(const Vertice *u, const Vertice *v)
     return u->getRepConst()/denum * unitVec;
 }
 
-double Eades::attractiveForceY(const Vertice *u, const Vertice *v, const Edge *e)
+double Eades::springForceY(const Vertice *u, const Vertice *v, const Edge *e)
 {
     double unitVec = (u->getY() - v->getY())/
             std::sqrt(std::pow((u->getX()-v->getX()), 2) + std::pow((u->getY() - v->getY()), 2));
