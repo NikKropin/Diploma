@@ -1,7 +1,7 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-#include <QList>
+#include <QVector>
 #include <utility>
 #include "eades.h"
 
@@ -12,15 +12,15 @@ public:
     Graph();
 
     void runEades();
-    QList<Vertice*> getVertices();
-    QList<QList<Edge*>> getEdges();
+    QVector<Vertice*> getVertices();
+    QVector<QVector<Edge*>> getEdges();
 
 private:
     int verticesAmount;
-    QList<Vertice*> vertices;
+    QVector<Vertice*> vertices;
 
     //Списки смежности. Индекс в списке соотв. номеру вершины
-    QList<QList<Edge*>> edges;
+    QVector<QVector<Edge*>> edges;
 };
 
 #endif // GRAPH_H

@@ -113,12 +113,12 @@ void Graph::runEades()
     return;
 }
 
-QList<Vertice *> Graph::getVertices()
+QVector<Vertice *> Graph::getVertices()
 {
     return vertices;
 }
 
-QList<QList<Edge *> > Graph::getEdges()
+QVector<QVector<Edge *> > Graph::getEdges()
 {
     return edges;
 }
