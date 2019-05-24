@@ -90,7 +90,6 @@ void Graph::runEades()
                 } else {
                     displX += calc.repulsiveForceX(vertices.at(k), vertices.at(j));
                     displY += calc.repulsiveForceY(vertices.at(k), vertices.at(j));
-                    //displX = displY = 0;
                 }
             }
 
