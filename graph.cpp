@@ -57,7 +57,7 @@ Graph::Graph()
 
 void Graph::runEades()
 {
-    QList<std::pair<double, double>> displacements;
+    QVector<std::pair<double, double>> displacements;
     for (int i = 0; i < vertices.size(); ++i){
         displacements.push_back({0,0});
     }

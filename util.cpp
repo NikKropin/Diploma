@@ -17,7 +17,7 @@ std::vector<std::unique_ptr<TreeNode> > readTree()
             int parentInd = cur.split("-").at(0).toInt() - 1;
             //для м арного дерева уже не два сына
             int lInd = children.at(0).toInt() - 1;
-            res[parentInd]->leftSon = res[lInd].get();
+            if (lInd != parentInd) res[parentInd]->leftSon = res[lInd].get();
             if (children.size() > 1){
                 int rInd = children.at(1).toInt() - 1;
                 res[parentInd]->rightSon = res[rInd].get();
