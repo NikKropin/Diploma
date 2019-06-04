@@ -11,13 +11,14 @@ MainWindow::MainWindow(QWidget *parent) :
 
     scene = new QGraphicsScene(this);
 
+    graph = readGraph();
+    paintGraph();
+
     view = new MyGraphicsView();
     view->setScene(scene);
     connect(view, &MyGraphicsView::resized, this, &MainWindow::slotStartTimer);
 
     ui->viewLayout->addWidget(view);
-
-    graph = new Graph;
 
     timer = new QTimer(this);
     timer->setSingleShot(true);
@@ -49,12 +50,7 @@ void MainWindow::paintGraph()
     }
 }
 
-void MainWindow::runEades()
-{
-    graph->runEades();
-}
-
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_forceButton_clicked()
 {
     //НАДО ВЕРНУТЬ ЦИКЛ ПО КОЛИЧЕСТВУ ИТЕРАЦИЙ В ГРАФЕ
     graph->runEades();
@@ -77,7 +73,7 @@ void MainWindow::on_verticalSlider_sliderMoved(int position)
     sliderPos = position;
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_treeButton_clicked()
 {
     std::vector<std::unique_ptr<TreeNode>> tree = readTree();
     scene->clear();

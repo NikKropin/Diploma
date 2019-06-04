@@ -26,3 +26,39 @@ std::vector<std::unique_ptr<TreeNode> > readTree()
     } else res.push_back(nullptr);
     return res;
 }
+
+Graph *readGraph()
+{
+    Graph *res = new Graph();
+    QVector<QVector<Edge*>> edges;
+    QVector<Vertice*> vertices;
+    QFile file("D:/QtProj/GraphDrawing/graph.txt");
+    if (file.open(QIODevice::ReadOnly)){
+        QTextStream in(&file);
+        int nodesCount = in.readLine().toInt();
+        vertices.resize(nodesCount);
+        edges.resize(nodesCount);
+        while (!in.atEnd()){
+            QString cur = in.readLine();
+            if (cur.startsWith('v')){
+                QStringList verticeInfo = cur.section(' ',1,1).split(":");
+                double x = verticeInfo.at(1).section(',',0,0).toDouble();
+                double y = verticeInfo.at(1).section(',',1,1).toDouble();
+                vertices[verticeInfo.at(0).toInt()-1] = new Vertice(x,y);
+                //vertices.at(verticeInfo.at(0).toInt()-1)->setCoordinates(x,y);
+            } else {
+                QVector<Edge*> temp;
+                int index = cur.split(':').at(0).toInt() - 1;
+                for (QString dest : cur.split(':').at(1).split(',')){
+                    temp.push_back(new Edge(dest.toInt() - 1));
+                }
+                edges[index] = temp;
+            }
+        }
+    } else {
+        qDebug() << "Could not read a graph";
+    }
+    res->setEdges(edges);
+    res->setVertices(vertices);
+    return res;
+}

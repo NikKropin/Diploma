@@ -36,4 +36,5 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui
 
 DISTFILES += \
-    tree.txt
+    tree.txt \
+    graph.txt

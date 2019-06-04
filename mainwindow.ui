@@ -46,16 +46,16 @@
     <item row="1" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="forceButton">
         <property name="text">
          <string>Физическая укладка</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="treeButton">
         <property name="text">
-         <string>Построить дерево</string>
+         <string>Укладка дерева</string>
         </property>
        </widget>
       </item>

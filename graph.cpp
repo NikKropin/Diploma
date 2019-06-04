@@ -121,3 +121,13 @@ QVector<QVector<Edge *> > Graph::getEdges()
 {
     return edges;
 }
+
+void Graph::setVertices(QVector<Vertice *> vertices_)
+{
+    vertices = vertices_;
+}
+
+void Graph::setEdges(QVector<QVector<Edge *> > edges_)
+{
+    edges = edges_;
+}

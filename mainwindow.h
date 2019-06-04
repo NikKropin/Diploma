@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include "mygraphicsview.h"
-#include "graph.h"
 #include "eades.h"
 #include "vertice.h"
 #include "setuptree.hpp"
@@ -21,16 +20,15 @@ public:
     ~MainWindow();
 
     void paintGraph();
-    void runEades();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_forceButton_clicked();
     void slotResize();
     void slotStartTimer();
 
     void on_verticalSlider_sliderMoved(int position);
 
-    void on_pushButton_2_clicked();
+    void on_treeButton_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -14,6 +14,8 @@ public:
     void runEades();
     QVector<Vertice*> getVertices();
     QVector<QVector<Edge*>> getEdges();
+    void setVertices(QVector<Vertice*> vertices_);
+    void setEdges(QVector<QVector<Edge*>> edges_);
 
 private:
     int verticesAmount;
