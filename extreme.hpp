@@ -13,8 +13,6 @@ struct Extreme{
     }
 
     TreeNode *node;
-    //offset - расстояние от корня дерева (по Х?)
-    //level - на какой глубине в дереве расположен узел
     int offset, level;
 };
 

@@ -52,7 +52,6 @@ void MainWindow::paintGraph()
 
 void MainWindow::on_forceButton_clicked()
 {
-    //НАДО ВЕРНУТЬ ЦИКЛ ПО КОЛИЧЕСТВУ ИТЕРАЦИЙ В ГРАФЕ
     graph->runEades();
     paintGraph();
 }

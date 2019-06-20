@@ -5,54 +5,6 @@
 Graph::Graph()
 {
 
-    //ЧИСТИТЬ УКАЗАТЕЛИ НА ВЕРШИНЫ
-//    vertices.push_back(new Vertice(500, 450));
-//    vertices.push_back(new Vertice(400, 300));
-//    vertices.push_back(new Vertice(850, 200));
-//    vertices.push_back(new Vertice(250, 100));
-//    vertices.push_back(new Vertice(70, 70));
-
-//    //НАДО ЗАДАВАТЬ НЕ В ТУПУЮ, JSON?
-//    verticesAmount = 5;
-
-//    Edge* temp = new Edge(1), *temp1 = new Edge(2), *temp2 = new Edge(2),
-//            *temp3 = new Edge(3), *temp4 = new Edge(4), *temp5 = new Edge(0);
-
-//    edges.push_back({temp});
-//    edges.push_back({temp2});
-//    edges.push_back({temp3});
-//    edges.push_back({temp4});
-//    edges.push_back({temp5});
-
-    vertices.push_back(new Vertice(300, 300));
-    vertices.push_back(new Vertice(250, 350));
-    vertices.push_back(new Vertice(275, 400));
-    vertices.push_back(new Vertice(325, 400));
-    vertices.push_back(new Vertice(350, 350));
-    vertices.push_back(new Vertice(240, 200));
-    vertices.push_back(new Vertice(100, 420));
-    vertices.push_back(new Vertice(300, 450));
-    vertices.push_back(new Vertice(500, 420));
-    vertices.push_back(new Vertice(360, 200));
-
-    //НАДО ЗАДАВАТЬ НЕ В ТУПУЮ, JSON?
-    verticesAmount = 10;
-
-    Edge* temp = new Edge(1), *temp1 = new Edge(2), *temp2 = new Edge(3),
-            *temp3 = new Edge(4), *temp4 = new Edge(5), *temp5 = new Edge(6),
-            *temp6 = new Edge(7), *temp7 = new Edge(8), *temp8 = new Edge(9);/*,
-            *temp9 = new Edge(5), *temp10 = new Edge(7), *temp11 = new Edge(8),
-            *temp12 = new Edge(8), *temp13 = new Edge(8), *temp14 = new Edge(9),
-            *temp15 = new Edge(9), *temp16 = new Edge(9);*/
-
-    edges.push_back({temp, temp3, temp6});
-    edges.push_back({temp1, temp5, temp6, temp8});
-    edges.push_back({temp2, temp5, temp8});
-    edges.push_back({temp3, temp4, temp7});
-    edges.push_back({temp4, temp6, temp7});
-    edges.push_back({temp7});
-    edges.push_back({temp8});
-
 }
 
 void Graph::runEades()

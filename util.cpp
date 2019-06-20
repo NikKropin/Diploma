@@ -15,7 +15,6 @@ std::vector<std::unique_ptr<TreeNode> > readTree()
             QString cur = in.readLine();
             QStringList children = cur.split("-").at(1).split(",");
             int parentInd = cur.split("-").at(0).toInt() - 1;
-            //для м арного дерева уже не два сына
             int lInd = children.at(0).toInt() - 1;
             if (lInd != parentInd) res[parentInd]->leftSon = res[lInd].get();
             if (children.size() > 1){
@@ -45,7 +44,6 @@ Graph *readGraph()
                 double x = verticeInfo.at(1).section(',',0,0).toDouble();
                 double y = verticeInfo.at(1).section(',',1,1).toDouble();
                 vertices[verticeInfo.at(0).toInt()-1] = new Vertice(x,y);
-                //vertices.at(verticeInfo.at(0).toInt()-1)->setCoordinates(x,y);
             } else {
                 QVector<Edge*> temp;
                 int index = cur.split(':').at(0).toInt() - 1;
